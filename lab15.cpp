@@ -18,6 +18,7 @@ class film {
 
             void SetTitle(const string& t) { title = t; }
             void SetYear(int y) { Ryear = y; }
+            void SetWriter(const string& s) { scwriter = s; }
 
 
             string getTitle() const { return title; }
@@ -38,5 +39,17 @@ int main () {
         return 1;
     }
     vector<film> films;
+    string title, writer;
+    int year;
 
-}
+    for (int i = 0; i < 4; ++i) {
+        getline(fin, title);
+        fin >> year;
+        fin.ignore(); // to ignore the newline character after the year
+        getline(fin, writer);
+        films.emplace_back(title, year, writer); // add film to vector
+    }
+    
+
+    }
+
