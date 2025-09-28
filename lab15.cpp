@@ -54,8 +54,12 @@ int main () {
         temp.SetTitle(title);
         temp.SetYear(year);
         temp.SetWriter(writer);
-    }return 0;
-
-
     }
+    
+    for (const auto& f : films) {
+        f.print();
+    }
+    return 0;
+
+}
 
