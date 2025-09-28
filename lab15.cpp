@@ -45,11 +45,17 @@ int main () {
     for (int i = 0; i < 4; ++i) {
         getline(fin, title);
         fin >> year;
+
         fin.ignore(); // to ignore the newline character after the year
         getline(fin, writer);
         films.emplace_back(title, year, writer); // add film to vector
-    }
-    
+
+        film temp;
+        temp.SetTitle(title);
+        temp.SetYear(year);
+        temp.SetWriter(writer);
+    }return 0;
+
 
     }
 
